@@ -244,17 +244,17 @@ dependencies {
     implementation("io.github.llamalad7:mixinextras-forge:0.4.1")
 
     // ASM 依赖
-    implementation("org.ow2.asm:asm:7.4")
-    implementation("org.ow2.asm:asm-tree:7.4")
-    implementation("org.ow2.asm:asm-analysis:7.4")
+    implementation("org.ow2.asm:asm:7.3")
+    implementation("org.ow2.asm:asm-tree:7.3")
+    implementation("org.ow2.asm:asm-analysis:7.3")
 
     runtimeOnly fg.deobf("curse.maven:carry-on-274259:${carry_on_id}")
 
     configurations.configureEach {
         resolutionStrategy {
-            force "org.ow2.asm:asm:7.4"
-            force "org.ow2.asm:asm-tree:7.4"
-            force "org.ow2.asm:asm-analysis:7.4"
+            force "org.ow2.asm:asm:7.3"
+            force "org.ow2.asm:asm-tree:7.3"
+            force "org.ow2.asm:asm-analysis:7.3"
         }
     }
 
