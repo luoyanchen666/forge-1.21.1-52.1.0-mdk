@@ -218,7 +218,7 @@ dependencies {
     implementation fg.deobf("curse.maven:framework-549225:5911989")
     compileOnly(fg.deobf("curse.maven:controllable-317269:6277379"))
     //asm库的依赖
-    implementation("org.ow2.asm:asm:9.8") //  或者其他兼容版本
+    implementation("org.ow2.asm:asm:7.4") //  或者其他兼容版本
     // 越肩视角，用来兼容第三人称准星
     implementation fg.deobf("curse.maven:shoulder-surfing-reloaded-243190:6387996")
 
@@ -232,10 +232,12 @@ dependencies {
     // 引入 MixinExtras 以解决一些棘手的 Mixin 冲突问题（比如 @Redirect 不能嵌套）
     // 如果未来有迁移到 Fabric / NeoForge 的计划，请注意这两个框架都已自带 MixinExtras，无需自行打包。
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1"))  //0.3.6
-    implementation(jarJar("io.github.llamalad7:mixinextras-forge:0.4.1")) {
-        jarJar.ranged(it, "[0.8.7,)")
-    }
-    //implementation "io.github.llamalad7:mixinextras-forge:0.4.1"
+    //implementation(jarJar("io.github.llamalad7:mixinextras-forge:0.4.1")) {
+    //    jarJar.ranged(it, "[0.8.7,)")
+    //}
+
+    implementation  ("io.github.llamalad7:mixinextras-forge:0.4.1")
+    
     implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:${player_animation_lib}")
 
     //mixin的依赖
