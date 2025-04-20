@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.minecraftforge.network", // 匹配包名
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "MixinForgePayload"
+  ],
+  "client": [
+
+  ],
+  "server": [
+
+  ]
+}
